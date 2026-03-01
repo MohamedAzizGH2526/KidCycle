@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter un produit — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css">
+  <link rel="stylesheet" href="AjoutProduit.css">
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Navigation -->
+  <nav class="topnav" aria-label="Navigation principale">
+    <div class="nav-brand">
+      <a href="Filtres.html"><img class="logo" src="images/Kidcycle.svg" alt="KidCycle"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Filtres.html">🏠 Accueil</a></li>
+      <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+      <li><a href="Vente.html">💰 Vente</a></li>
+      <li><a href="Produits.html">📦 Mes Produits</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Commandes.html" class="btn btn-outline" style="font-size:13px;">🛒 Commandes</a>
+      <a href="Favoris.html" class="btn btn-outline" style="font-size:13px;">♥ Favoris</a>
+      <span class="coin-icon">⊙</span>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="Filtres.html">Accueil</a>
+    <span>›</span>
+    <a href="Vente.html">Vente</a>
+    <span>›</span>
+    <span>Ajouter un produit</span>
+  </nav>
+
+  <!-- Modal toggle (checkbox hack) -->
+  <input type="checkbox" id="publish-toggle" aria-hidden="true">
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <span class="success-emoji" aria-hidden="true">🎉</span>
+      <h2 id="modal-title">Annonce publiée !</h2>
+      <p>Votre article a été mis en ligne avec succès. Les acheteurs peuvent désormais le découvrir sur KidCycle.</p>
+      <a href="Produits.html" class="btn btn-primary" style="width:100%;justify-content:center;">📦 Voir mes produits</a>
+      <br><br>
+      <label for="publish-toggle" class="btn btn-outline" style="width:100%;justify-content:center;cursor:pointer;">✏️ Ajouter un autre article</label>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- Progress Steps -->
+    <div class="progress-wrap">
+      <div class="progress-steps" aria-label="Étapes de publication">
+        <div class="progress-step active">
+          <div class="step-num">1</div>
+          <div class="step-info">
+            <span class="step-label">Détails</span>
+            <span class="step-sub">Informations produit</span>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="step-num">2</div>
+          <div class="step-info">
+            <span class="step-label">Photos</span>
+            <span class="step-sub">Ajouter des images</span>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="step-num">3</div>
+          <div class="step-info">
+            <span class="step-label">Publier</span>
+            <span class="step-sub">Vérifier et valider</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="ajout-layout">
+
+      <!-- LEFT: Form -->
+      <div class="form-card">
+        <h2 class="form-card-title">📝 Détails du produit</h2>
+
+        <!-- Product ID -->
+        <div class="form-group">
+          <label for="prod-id">Référence produit</label>
+          <input type="text" id="prod-id" value="KC-2024-001" disabled class="field-id" aria-label="Identifiant produit auto-généré">
+        </div>
+
+        <!-- Title -->
+        <div class="form-group">
+          <label for="prod-title">Titre de l'annonce <span style="color:var(--danger)">*</span></label>
+          <input type="text" id="prod-title" placeholder="Ex : Robe été fleurie 18 mois" maxlength="80" required>
+          <span class="form-hint">Soyez descriptif et précis pour attirer plus d'acheteurs</span>
+        </div>
+
+        <hr class="form-divider">
+
+        <!-- Condition -->
+        <div class="form-group">
+          <label>État de l'article <span style="color:var(--danger)">*</span></label>
+          <div class="condition-grid">
+            <input type="radio" name="condition" id="cond-neuf" class="cond-radio" value="neuf" checked>
+            <label for="cond-neuf" class="cond-card">
+              <span class="cond-icon" aria-hidden="true">✨</span>
+              <span class="cond-title">Neuf</span>
+              <span class="cond-desc">Jamais porté avec étiquette</span>
+            </label>
+
+            <input type="radio" name="condition" id="cond-occasion" class="cond-radio" value="occasion">
+            <label for="cond-occasion" class="cond-card">
+              <span class="cond-icon" aria-hidden="true">♻️</span>
+              <span class="cond-title">Occasion</span>
+              <span class="cond-desc">Porté plusieurs fois</span>
+            </label>
+
+            <input type="radio" name="condition" id="cond-bon" class="cond-radio" value="bon">
+            <label for="cond-bon" class="cond-card">
+              <span class="cond-icon" aria-hidden="true">👍</span>
+              <span class="cond-title">Bon état</span>
+              <span class="cond-desc">Porté avec soin</span>
+            </label>
+          </div>
+        </div>
+
+        <hr class="form-divider">
+
+        <!-- Genre + Taille -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prod-genre">Genre <span style="color:var(--danger)">*</span></label>
+            <select id="prod-genre" required>
+              <option value="">Sélectionner…</option>
+              <option value="fille">👧 Fille</option>
+              <option value="garcon">👦 Garçon</option>
+              <option value="mixte">🧒 Mixte</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="prod-taille">Taille <span style="color:var(--danger)">*</span></label>
+            <select id="prod-taille" required>
+              <option value="">Sélectionner…</option>
+              <option value="0-3m">0 – 3 mois</option>
+              <option value="3-6m">3 – 6 mois</option>
+              <option value="6-12m">6 – 12 mois</option>
+              <option value="12-18m">12 – 18 mois</option>
+              <option value="18-24m">18 – 24 mois</option>
+              <option value="2ans">2 ans</option>
+              <option value="3ans">3 ans</option>
+              <option value="4ans">4 ans</option>
+              <option value="5ans">5 ans</option>
+              <option value="6ans">6 ans</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Catégorie + Prix -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prod-cat">Catégorie <span style="color:var(--danger)">*</span></label>
+            <select id="prod-cat" required>
+              <option value="">Sélectionner…</option>
+              <option value="vetements">👗 Vêtements</option>
+              <option value="chaussures">👟 Chaussures</option>
+              <option value="accessoires">🎒 Accessoires</option>
+              <option value="jouets">🧸 Jouets</option>
+              <option value="poussettes">🍼 Poussettes</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="prod-prix">Prix en coins <span style="color:var(--danger)">*</span></label>
+            <div class="price-wrap">
+              <span class="price-prefix">⊙ Coins</span>
+              <input type="number" id="prod-prix" placeholder="Ex : 15" min="1" max="9999" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label for="prod-desc">Description</label>
+          <textarea id="prod-desc" placeholder="Décrivez l'article, ses caractéristiques, les éventuels défauts…" maxlength="250" rows="4"></textarea>
+          <span class="form-hint">250 caractères maximum</span>
+        </div>
+
+        <!-- Actions -->
+        <div class="form-actions">
+          <a href="Vente.html" class="btn btn-outline">Annuler</a>
+          <label for="publish-toggle" class="btn btn-primary" role="button" tabindex="0">🚀 Publier l'annonce</label>
+        </div>
+      </div>
+
+      <!-- RIGHT: Photos -->
+      <div class="photos-card">
+        <h2 class="photos-card-title">📸 Photos du produit</h2>
+
+        <!-- Main upload zone -->
+        <input type="file" accept="image/*" id="img-main" style="display:none" aria-label="Photo principale">
+        <label for="img-main" class="upload-main" role="button">
+          <span class="upload-icon" aria-hidden="true">📷</span>
+          <span class="upload-main-label">Photo principale</span>
+          <span class="upload-main-sub">Cliquez ou glissez une image ici</span>
+        </label>
+
+        <!-- Small uploads -->
+        <div class="upload-grid">
+          <input type="file" accept="image/*" id="img-2" style="display:none" aria-label="Photo 2">
+          <label for="img-2" class="upload-small" title="Photo 2">➕</label>
+
+          <input type="file" accept="image/*" id="img-3" style="display:none" aria-label="Photo 3">
+          <label for="img-3" class="upload-small" title="Photo 3">➕</label>
+
+          <input type="file" accept="image/*" id="img-4" style="display:none" aria-label="Photo 4">
+          <label for="img-4" class="upload-small" title="Photo 4">➕</label>
+
+          <input type="file" accept="image/*" id="img-5" style="display:none" aria-label="Photo 5">
+          <label for="img-5" class="upload-small" title="Photo 5">➕</label>
+
+          <input type="file" accept="image/*" id="img-6" style="display:none" aria-label="Photo 6">
+          <label for="img-6" class="upload-small" title="Photo 6">➕</label>
+        </div>
+
+        <!-- Tips -->
+        <div class="photo-tips" aria-label="Conseils photo">
+          <span class="tip-badge">💡 Bonne luminosité</span>
+          <span class="tip-badge">🎨 Fond neutre</span>
+          <span class="tip-badge">📐 Plusieurs angles</span>
+          <span class="tip-badge">🔍 Détails visibles</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="images/Kidcycle.svg" alt="KidCycle" style="height:36px;margin-bottom:8px;">
+        <p class="footer-brand-text">La marketplace des vêtements enfants. Achetez, vendez, recyclez en toute sécurité.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="Filtres.html">🏠 Accueil</a></li>
+          <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+          <li><a href="Vente.html">💰 Vente</a></li>
+          <li><a href="Produits.html">📦 Mes Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Mon Compte</h4>
+        <ul class="footer-links">
+          <li><a href="Commandes.html">🛒 Commandes</a></li>
+          <li><a href="Favoris.html">♥ Favoris</a></li>
+          <li><a href="AjoutProduit.html">➕ Ajouter un produit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Aide</h4>
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2026 KidCycle. Tous droits réservés.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+</body>
+</html>

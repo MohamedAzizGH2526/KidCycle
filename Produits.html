@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Produits — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css">
+  <link rel="stylesheet" href="Produits.css">
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Navigation -->
+  <nav class="topnav" aria-label="Navigation principale">
+    <div class="nav-brand">
+      <a href="Filtres.html"><img class="logo" src="images/Kidcycle.svg" alt="KidCycle"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Filtres.html">🏠 Accueil</a></li>
+      <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+      <li><a href="Vente.html">💰 Vente</a></li>
+      <li><a href="Produits.html" class="nav-active">📦 Mes Produits</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Commandes.html" class="btn btn-outline" style="font-size:13px;">🛒 Commandes</a>
+      <a href="Favoris.html" class="btn btn-outline" style="font-size:13px;">♥ Favoris</a>
+      <span class="coin-icon">⊙</span>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="Filtres.html">Accueil</a>
+    <span>›</span>
+    <span>Mes Produits</span>
+  </nav>
+
+  <main id="main">
+    <div class="container" style="padding-top:24px;padding-bottom:48px;">
+
+      <!-- Top Bar -->
+      <div class="produits-topbar" style="margin-bottom:24px;">
+        <div>
+          <h1 style="font-size:22px;font-weight:700;">📦 Mes Produits</h1>
+          <p style="font-size:14px;color:var(--text-mid);margin-top:4px;">Gérez vos annonces en cours</p>
+        </div>
+        <a href="AjoutProduit.html" class="btn btn-primary btn-add">➕ Ajouter un produit</a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="stats-bar" style="margin-bottom:24px;">
+        <div class="stat-chip">
+          <span class="value">3</span>
+          <span class="label">Total annonces</span>
+        </div>
+        <div class="stat-chip">
+          <span class="value">1</span>
+          <span class="label">Actives</span>
+        </div>
+        <div class="stat-chip">
+          <span class="value">2</span>
+          <span class="label">En attente</span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="product-tabs" role="tablist" aria-label="Filtrer les produits">
+        <input type="radio" name="produit-tab" id="tab-tous" class="tab-toggle" checked>
+        <label for="tab-tous" class="tab-label" role="tab" aria-selected="true">📋 Tous (3)</label>
+
+        <input type="radio" name="produit-tab" id="tab-actifs" class="tab-toggle">
+        <label for="tab-actifs" class="tab-label" role="tab">✅ Actifs (1)</label>
+
+        <input type="radio" name="produit-tab" id="tab-attente" class="tab-toggle">
+        <label for="tab-attente" class="tab-label" role="tab">⏳ En attente (2)</label>
+      </div>
+
+      <!-- Products List -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:20px;">
+
+        <!-- Product 1 -->
+        <input type="checkbox" class="cancel-toggle" id="cancel-p1">
+        <input type="checkbox" class="delete-toggle" id="delete-p1">
+        <div class="card-wrap">
+          <article class="product-card" aria-label="Robe fleurie 18 mois">
+            <div class="card-img">
+              <div class="card-img-placeholder" style="background:linear-gradient(135deg,#f3f0fb,#e8e4f3);">👗</div>
+              <div style="position:absolute;top:10px;left:10px;">
+                <span class="badge badge-pending">⏳ En attente</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span class="status-dot pending" aria-hidden="true"></span>
+                <h3 class="card-title">Robe fleurie 18 mois</h3>
+              </div>
+              <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 12</div>
+              <div class="card-meta">
+                <span class="card-tag">Neuf ✨</span>
+                <span class="card-tag">18 mois</span>
+                <span class="card-tag card-tag-gold">Fille 👧</span>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:4px;flex-wrap:wrap;">
+                <a href="AjoutProduit.html" class="btn btn-outline" style="font-size:12px;padding:6px 12px;">✏️ Modifier</a>
+                <label for="cancel-p1" class="btn btn-outline cancel-lbl" style="font-size:12px;padding:6px 12px;cursor:pointer;" aria-label="Annuler l'annonce">
+                  <span class="lbl-annuler">⏸ Suspendre</span>
+                  <span class="lbl-annule">Suspendue</span>
+                </label>
+                <label for="delete-p1" class="btn btn-danger delete-lbl" style="font-size:12px;padding:6px 12px;cursor:pointer;" aria-label="Supprimer l'annonce">
+                  <span class="lbl-suppr">🗑 Supprimer</span>
+                  <span class="lbl-supprime">Supprimée</span>
+                </label>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 2 -->
+        <input type="checkbox" class="cancel-toggle" id="cancel-p2">
+        <input type="checkbox" class="delete-toggle" id="delete-p2">
+        <div class="card-wrap">
+          <article class="product-card" aria-label="Baskets sport P.24">
+            <div class="card-img">
+              <div class="card-img-placeholder" style="background:linear-gradient(135deg,#e4f5eb,#d0edd9);">👟</div>
+              <div style="position:absolute;top:10px;left:10px;">
+                <span class="badge badge-active">✅ Actif</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span class="status-dot active" aria-hidden="true"></span>
+                <h3 class="card-title">Baskets sport P.24</h3>
+              </div>
+              <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 18</div>
+              <div class="card-meta">
+                <span class="card-tag">Très bon état ⭐</span>
+                <span class="card-tag">P.24</span>
+                <span class="card-tag card-tag-gold">Garçon 👦</span>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:4px;flex-wrap:wrap;">
+                <a href="AjoutProduit.html" class="btn btn-outline" style="font-size:12px;padding:6px 12px;">✏️ Modifier</a>
+                <label for="cancel-p2" class="btn btn-outline cancel-lbl" style="font-size:12px;padding:6px 12px;cursor:pointer;" aria-label="Suspendre l'annonce">
+                  <span class="lbl-annuler">⏸ Suspendre</span>
+                  <span class="lbl-annule">Suspendue</span>
+                </label>
+                <label for="delete-p2" class="btn btn-danger delete-lbl" style="font-size:12px;padding:6px 12px;cursor:pointer;" aria-label="Supprimer l'annonce">
+                  <span class="lbl-suppr">🗑 Supprimer</span>
+                  <span class="lbl-supprime">Supprimée</span>
+                </label>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 3 -->
+        <input type="checkbox" class="cancel-toggle" id="cancel-p3">
+        <input type="checkbox" class="delete-toggle" id="delete-p3">
+        <div class="card-wrap">
+          <article class="product-card" aria-label="Manteau chaud 3 ans">
+            <div class="card-img">
+              <div class="card-img-placeholder" style="background:linear-gradient(135deg,#fef8ee,#fdefd0);">🧥</div>
+              <div style="position:absolute;top:10px;left:10px;">
+                <span class="badge badge-pending">⏳ En attente</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span class="status-dot pending" aria-hidden="true"></span>
+                <h3 class="card-title">Manteau chaud 3 ans</h3>
+              </div>
+              <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 24</div>
+              <div class="card-meta">
+                <span class="card-tag">Bon état 👍</span>
+                <span class="card-tag">3 ans</span>
+                <span class="card-tag">Mixte 🧒</span>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:4px;flex-wrap:wrap;">
+                <a href="AjoutProduit.html" class="btn btn-outline" style="font-size:12px;padding:6px 12px;">✏️ Modifier</a>
+                <label for="cancel-p3" class="btn btn-outline cancel-lbl" style="font-size:12px;padding:6px 12px;cursor:pointer;" aria-label="Suspendre l'annonce">
+                  <span class="lbl-annuler">⏸ Suspendre</span>
+                  <span class="lbl-annule">Suspendue</span>
+                </label>
+                <label for="delete-p3" class="btn btn-danger delete-lbl" style="font-size:12px;padding:6px 12px;cursor:pointer;" aria-label="Supprimer l'annonce">
+                  <span class="lbl-suppr">🗑 Supprimer</span>
+                  <span class="lbl-supprime">Supprimée</span>
+                </label>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="images/Kidcycle.svg" alt="KidCycle" style="height:36px;margin-bottom:8px;">
+        <p class="footer-brand-text">La marketplace des vêtements enfants. Achetez, vendez, recyclez en toute sécurité.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="Filtres.html">🏠 Accueil</a></li>
+          <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+          <li><a href="Vente.html">💰 Vente</a></li>
+          <li><a href="Produits.html">📦 Mes Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Mon Compte</h4>
+        <ul class="footer-links">
+          <li><a href="Commandes.html">🛒 Commandes</a></li>
+          <li><a href="Favoris.html">♥ Favoris</a></li>
+          <li><a href="AjoutProduit.html">➕ Ajouter un produit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Aide</h4>
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2026 KidCycle. Tous droits réservés.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+</body>
+</html>

@@ -1,0 +1,253 @@
+/* AjoutProduit.css – Add Product form page */
+
+/* ── Progress Steps ── */
+.progress-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+}
+.progress-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: white;
+  border-radius: var(--radius);
+  padding: 20px 28px;
+  box-shadow: var(--card-shadow);
+}
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  position: relative;
+}
+.progress-step:not(:last-child)::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--border);
+  margin: 0 16px;
+  border-radius: 1px;
+}
+.progress-step.done:not(:last-child)::after,
+.progress-step.active:not(:last-child)::after {
+  background: linear-gradient(90deg, var(--purple-btn), var(--border));
+}
+.step-num {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-light);
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+.progress-step.active .step-num {
+  background: linear-gradient(135deg, var(--purple-btn), var(--purple-deep));
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 12px rgba(155,142,196,.3);
+}
+.progress-step.done .step-num {
+  background: var(--success);
+  border-color: transparent;
+  color: white;
+}
+.step-info { display: flex; flex-direction: column; gap: 2px; }
+.step-label { font-size: 13px; font-weight: 700; color: var(--text-mid); }
+.progress-step.active .step-label { color: var(--purple); }
+.progress-step.done .step-label  { color: var(--success); }
+.step-sub { font-size: 11px; color: var(--text-light); }
+
+/* ── Two-column layout ── */
+.ajout-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  align-items: start;
+}
+
+/* ── Form Card ── */
+.form-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-divider { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
+
+/* Product ID field */
+.field-id {
+  background: var(--bg);
+  border-color: var(--border);
+  color: var(--text-light);
+  cursor: not-allowed;
+}
+
+/* ── Condition Cards ── */
+.condition-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cond-radio { display: none; }
+.cond-card {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.cond-card:hover { border-color: var(--purple-btn); background: var(--purple-bg); }
+.cond-radio:checked + .cond-card {
+  border-color: var(--purple);
+  background: var(--purple-bg);
+  box-shadow: 0 0 0 3px rgba(155,142,196,.15);
+}
+.cond-icon { font-size: 24px; }
+.cond-title { font-size: 13px; font-weight: 700; color: var(--text-dark); }
+.cond-desc  { font-size: 11px; color: var(--text-mid); line-height: 1.4; }
+
+/* ── Price Input ── */
+.price-wrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  transition: border-color var(--transition);
+  background: white;
+}
+.price-wrap:focus-within { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(155,142,196,.15); }
+.price-prefix {
+  padding: 10px 12px;
+  background: var(--purple-bg);
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.price-wrap input {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  flex: 1;
+}
+.price-wrap input:focus { box-shadow: none; }
+
+/* ── Photos Card ── */
+.photos-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 28px;
+  position: sticky;
+  top: calc(var(--nav-height) + 16px);
+}
+.photos-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* Upload Zones */
+.upload-main {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border: 2px dashed var(--purple-btn);
+  border-radius: var(--radius-sm);
+  background: var(--purple-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.upload-main:hover { border-color: var(--purple); background: #ebe7f7; }
+.upload-icon { font-size: 36px; }
+.upload-main-label { font-size: 14px; font-weight: 700; color: var(--purple); }
+.upload-main-sub  { font-size: 12px; color: var(--text-mid); }
+
+.upload-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+.upload-small {
+  aspect-ratio: 1;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-xs);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: 20px;
+  color: var(--text-light);
+}
+.upload-small:hover { border-color: var(--purple-btn); background: var(--purple-bg); color: var(--purple); }
+
+/* Photo Tips */
+.photo-tips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tip-badge {
+  font-size: 11px;
+  background: var(--gold-light);
+  color: #8a6a1a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ── Form Actions ── */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+/* ── Modal (checkbox hack) ── */
+#publish-toggle { display: none; }
+#publish-toggle:checked ~ .modal-overlay { display: flex; }
+.modal-overlay { position: fixed; }
+.success-emoji { font-size: 56px; margin-bottom: 12px; display: block; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .ajout-layout { grid-template-columns: 1fr; }
+  .photos-card { position: static; }
+  .progress-steps { flex-wrap: wrap; gap: 12px; }
+  .progress-step::after { display: none; }
+}
+@media (max-width: 540px) {
+  .condition-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .ajout-layout { padding: 0 16px 48px; }
+}

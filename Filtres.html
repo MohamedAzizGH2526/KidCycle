@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtres — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css">
+  <link rel="stylesheet" href="Filtres.css">
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Navigation -->
+  <nav class="topnav" aria-label="Navigation principale">
+    <div class="nav-brand">
+      <a href="Filtres.html"><img class="logo" src="images/Kidcycle.svg" alt="KidCycle"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Filtres.html" class="nav-active">🏠 Accueil</a></li>
+      <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+      <li><a href="Vente.html">💰 Vente</a></li>
+      <li><a href="Produits.html">📦 Mes Produits</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Commandes.html" class="btn btn-outline" style="font-size:13px;">🛒 Commandes</a>
+      <a href="Favoris.html" class="btn btn-outline" style="font-size:13px;">♥ Favoris</a>
+      <span class="coin-icon">⊙</span>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="Filtres.html">Accueil</a>
+    <span>›</span>
+    <span>Filtres</span>
+  </nav>
+
+  <!-- Active Filters Bar -->
+  <div class="active-filters">
+    <span class="active-filters-label">Filtres actifs :</span>
+    <span class="filter-chip">Vêtements <a href="#" class="filter-chip-remove" aria-label="Retirer filtre Vêtements">×</a></span>
+    <span class="filter-chip">Fille <a href="#" class="filter-chip-remove" aria-label="Retirer filtre Fille">×</a></span>
+    <span class="filter-chip">0–24 coins <a href="#" class="filter-chip-remove" aria-label="Retirer filtre prix">×</a></span>
+  </div>
+
+  <!-- View radios (outside layout for CSS hack) -->
+  <input type="radio" name="view" id="view-grid" class="view-radio" checked>
+  <input type="radio" name="view" id="view-list" class="view-radio">
+
+  <!-- Main Content -->
+  <main id="main">
+    <div class="filtres-layout">
+
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Filtres de recherche">
+        <h2 class="sidebar-title">🔍 Filtres</h2>
+
+        <!-- Search -->
+        <div class="filter-section">
+          <div class="search-wrapper">
+            <span class="search-icon" aria-hidden="true">🔎</span>
+            <input type="search" placeholder="Rechercher un article…" aria-label="Rechercher">
+          </div>
+        </div>
+
+        <hr class="filter-divider">
+
+        <!-- Category -->
+        <div class="filter-section">
+          <p class="filter-heading">Catégorie</p>
+          <label class="filter-option"><input type="radio" name="cat" value="tous" checked> Tous</label>
+          <label class="filter-option"><input type="radio" name="cat" value="vetements"> 👗 Vêtements</label>
+          <label class="filter-option"><input type="radio" name="cat" value="accessoires"> 🎒 Accessoires</label>
+          <label class="filter-option"><input type="radio" name="cat" value="chaussures"> 👟 Chaussures</label>
+          <label class="filter-option"><input type="radio" name="cat" value="jouets"> 🧸 Jouets</label>
+          <label class="filter-option"><input type="radio" name="cat" value="poussettes"> 🍼 Poussettes</label>
+        </div>
+
+        <hr class="filter-divider">
+
+        <!-- Condition -->
+        <div class="filter-section">
+          <p class="filter-heading">État</p>
+          <label class="filter-option"><input type="checkbox" name="cond" value="neuf"> ✨ Neuf avec étiquette</label>
+          <label class="filter-option"><input type="checkbox" name="cond" value="tbe"> ⭐ Très bon état</label>
+          <label class="filter-option"><input type="checkbox" name="cond" value="be"> 👍 Bon état</label>
+        </div>
+
+        <hr class="filter-divider">
+
+        <!-- Price -->
+        <div class="filter-section">
+          <p class="filter-heading">Prix (coins)</p>
+          <div class="price-bar-wrap">
+            <div class="price-bar"><div class="price-bar-fill"></div></div>
+            <div class="price-labels"><span>0 ⊙</span><span>100 ⊙</span></div>
+          </div>
+          <div class="price-range-inputs">
+            <input type="number" placeholder="Min" min="0" aria-label="Prix minimum">
+            <input type="number" placeholder="Max" min="0" aria-label="Prix maximum">
+          </div>
+        </div>
+
+        <hr class="filter-divider">
+
+        <!-- Gender -->
+        <div class="filter-section">
+          <p class="filter-heading">Genre</p>
+          <label class="filter-option"><input type="radio" name="genre" value="tous" checked> Tous</label>
+          <label class="filter-option"><input type="radio" name="genre" value="fille"> 👧 Fille</label>
+          <label class="filter-option"><input type="radio" name="genre" value="garcon"> 👦 Garçon</label>
+          <label class="filter-option"><input type="radio" name="genre" value="mixte"> 🧒 Mixte</label>
+        </div>
+
+        <hr class="filter-divider">
+
+        <!-- Size -->
+        <div class="filter-section">
+          <p class="filter-heading">Taille</p>
+          <div class="size-grid">
+            <input type="checkbox" class="size-chip" id="s1" name="size" value="0-3m"><label for="s1">0-3m</label>
+            <input type="checkbox" class="size-chip" id="s2" name="size" value="3-6m"><label for="s2">3-6m</label>
+            <input type="checkbox" class="size-chip" id="s3" name="size" value="6-12m"><label for="s3">6-12m</label>
+            <input type="checkbox" class="size-chip" id="s4" name="size" value="12-18m"><label for="s4">12-18m</label>
+            <input type="checkbox" class="size-chip" id="s5" name="size" value="18-24m"><label for="s5">18-24m</label>
+            <input type="checkbox" class="size-chip" id="s6" name="size" value="2ans"><label for="s6">2 ans</label>
+            <input type="checkbox" class="size-chip" id="s7" name="size" value="3ans"><label for="s7">3 ans</label>
+            <input type="checkbox" class="size-chip" id="s8" name="size" value="4ans"><label for="s8">4 ans</label>
+            <input type="checkbox" class="size-chip" id="s9" name="size" value="5ans"><label for="s9">5 ans</label>
+          </div>
+        </div>
+
+        <hr class="filter-divider">
+
+        <button class="btn-reset" type="button">🗑 Réinitialiser les filtres</button>
+      </aside>
+
+      <!-- Products Section -->
+      <section class="products-section" aria-label="Résultats">
+        <!-- Results Header -->
+        <div class="results-header">
+          <p class="results-count"><strong>12</strong> articles trouvés</p>
+          <div style="display:flex;gap:12px;align-items:center;">
+            <div class="sort-wrap">
+              <label for="sort-select">Trier :</label>
+              <select id="sort-select" aria-label="Trier par">
+                <option>Plus récents</option>
+                <option>Prix croissant</option>
+                <option>Prix décroissant</option>
+                <option>Meilleures notes</option>
+              </select>
+            </div>
+            <div class="view-toggle" role="group" aria-label="Affichage">
+              <label for="view-grid" class="view-btn" title="Vue grille">⊞</label>
+              <label for="view-list" class="view-btn" title="Vue liste">☰</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-area">
+          <div class="products-grid">
+
+            <!-- Card 1 -->
+            <article class="product-card">
+              <div class="card-img">
+                <div class="card-img-placeholder" style="background:linear-gradient(135deg,#f3f0fb,#e8e4f3);">👗</div>
+                <div class="card-badge-wrap"><span class="badge badge-new">✨ Nouveau</span></div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Robe fleurie été 18 mois</h3>
+                <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 12</div>
+                <div class="card-meta">
+                  <span class="card-tag">Neuf ✨</span>
+                  <span class="card-tag">18 mois</span>
+                  <span class="card-tag card-tag-gold">Fille 👧</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="product-card">
+              <div class="card-img">
+                <div class="card-img-placeholder" style="background:linear-gradient(135deg,#e8f5e9,#dff0e3);">👕</div>
+                <div class="card-badge-wrap"><span class="badge badge-pending">⏳ Occasion</span></div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">T-shirt dinosaure 2 ans</h3>
+                <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 6</div>
+                <div class="card-meta">
+                  <span class="card-tag">Bon état 👍</span>
+                  <span class="card-tag">2 ans</span>
+                  <span class="card-tag card-tag-gold">Garçon 👦</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="product-card">
+              <div class="card-img">
+                <div class="card-img-placeholder" style="background:linear-gradient(135deg,#fef8ee,#fdefd0);">🧥</div>
+                <div class="card-badge-wrap"><span class="badge badge-new">✨ Nouveau</span></div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Manteau chaud 3 ans</h3>
+                <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 24</div>
+                <div class="card-meta">
+                  <span class="card-tag">Très bon état ⭐</span>
+                  <span class="card-tag">3 ans</span>
+                  <span class="card-tag">Mixte 🧒</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="product-card">
+              <div class="card-img">
+                <div class="card-img-placeholder" style="background:linear-gradient(135deg,#f3f0fb,#ebe6f7);">👟</div>
+                <div class="card-badge-wrap"><span class="badge badge-active">✅ Actif</span></div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Chaussures sport pointure 22</h3>
+                <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 15</div>
+                <div class="card-meta">
+                  <span class="card-tag">Très bon état ⭐</span>
+                  <span class="card-tag">P.22</span>
+                  <span class="card-tag card-tag-gold">Garçon 👦</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="product-card">
+              <div class="card-img">
+                <div class="card-img-placeholder" style="background:linear-gradient(135deg,#fce8e8,#f9d4d4);">🎒</div>
+                <div class="card-badge-wrap"><span class="badge badge-new">✨ Nouveau</span></div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Sac à dos maternelle lapins</h3>
+                <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 9</div>
+                <div class="card-meta">
+                  <span class="card-tag">Neuf ✨</span>
+                  <span class="card-tag">3-5 ans</span>
+                  <span class="card-tag card-tag-gold">Fille 👧</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="product-card">
+              <div class="card-img">
+                <div class="card-img-placeholder" style="background:linear-gradient(135deg,#e4f5eb,#d0edd9);">🧸</div>
+                <div class="card-badge-wrap"><span class="badge badge-pending">⏳ Occasion</span></div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Peluche ours 40 cm</h3>
+                <div class="card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 5</div>
+                <div class="card-meta">
+                  <span class="card-tag">Bon état 👍</span>
+                  <span class="card-tag">0-5 ans</span>
+                  <span class="card-tag">Mixte 🧒</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Empty State (hidden) -->
+        <div class="empty-state" aria-hidden="true">
+          <div class="empty-state-icon">🔍</div>
+          <h3>Aucun article trouvé</h3>
+          <p>Essayez de modifier vos filtres pour trouver ce que vous cherchez.</p>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="images/Kidcycle.svg" alt="KidCycle" style="height:36px;margin-bottom:8px;">
+        <p class="footer-brand-text">La marketplace des vêtements enfants. Achetez, vendez, recyclez en toute sécurité.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="Filtres.html">🏠 Accueil</a></li>
+          <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+          <li><a href="Vente.html">💰 Vente</a></li>
+          <li><a href="Produits.html">📦 Mes Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Mon Compte</h4>
+        <ul class="footer-links">
+          <li><a href="Commandes.html">🛒 Commandes</a></li>
+          <li><a href="Favoris.html">♥ Favoris</a></li>
+          <li><a href="AjoutProduit.html">➕ Ajouter un produit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Aide</h4>
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2026 KidCycle. Tous droits réservés.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+</body>
+</html>

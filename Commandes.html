@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commandes — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css">
+  <link rel="stylesheet" href="Commandes.css">
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Navigation -->
+  <nav class="topnav" aria-label="Navigation principale">
+    <div class="nav-brand">
+      <a href="Filtres.html"><img class="logo" src="images/Kidcycle.svg" alt="KidCycle"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Filtres.html">🏠 Accueil</a></li>
+      <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+      <li><a href="Vente.html">💰 Vente</a></li>
+      <li><a href="Produits.html">📦 Mes Produits</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Commandes.html" class="btn btn-outline" style="font-size:13px;">🛒 Commandes</a>
+      <a href="Favoris.html" class="btn btn-outline" style="font-size:13px;">♥ Favoris</a>
+      <span class="coin-icon">⊙</span>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="Filtres.html">Accueil</a>
+    <span>›</span>
+    <span>Mes Commandes</span>
+  </nav>
+
+  <main id="main">
+    <div class="commandes-layout">
+
+      <!-- Header -->
+      <div class="commandes-header">
+        <div>
+          <h1>🛒 Mes Commandes</h1>
+          <p>Suivez l'état de vos achats et gérez vos commandes</p>
+        </div>
+        <a href="Filtres.html" class="btn btn-primary">➕ Nouvel achat</a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="commandes-stats">
+        <div class="stats-bar">
+          <div class="stat-chip">
+            <span class="value">8</span>
+            <span class="label">Total commandes</span>
+          </div>
+          <div class="stat-chip">
+            <span class="value">2</span>
+            <span class="label">En attente</span>
+          </div>
+          <div class="stat-chip">
+            <span class="value">5</span>
+            <span class="label">Confirmées</span>
+          </div>
+          <div class="stat-chip">
+            <span class="value">240 ⊙</span>
+            <span class="label">Coins dépensés</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Stepper Example -->
+      <div class="stepper-card">
+        <h3>Suivi de commande — KC-001</h3>
+        <div class="stepper" aria-label="Étapes de la commande KC-001">
+          <div class="stepper-step done" aria-label="Commande créée">
+            <div class="stepper-dot">✓</div>
+            <span class="stepper-step-label">Créée</span>
+          </div>
+          <div class="stepper-connector done" aria-hidden="true"></div>
+          <div class="stepper-step done" aria-label="Adresse validée">
+            <div class="stepper-dot">✓</div>
+            <span class="stepper-step-label">Adresse</span>
+          </div>
+          <div class="stepper-connector active" aria-hidden="true"></div>
+          <div class="stepper-step active" aria-label="En cours de validation">
+            <div class="stepper-dot">3</div>
+            <span class="stepper-step-label">Validation</span>
+          </div>
+          <div class="stepper-connector" aria-hidden="true"></div>
+          <div class="stepper-step" aria-label="Livraison en attente">
+            <div class="stepper-dot">4</div>
+            <span class="stepper-step-label">Livraison</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orders List -->
+      <div class="orders-list">
+
+        <!-- Order 1 -->
+        <input type="checkbox" class="cancel-order-toggle" id="cancel-1">
+        <div class="order-wrap">
+          <article class="order-card" aria-label="Commande KC-001">
+            <div class="order-accent" aria-hidden="true"></div>
+            <div class="order-body">
+              <div class="order-img" aria-hidden="true">👗</div>
+              <div class="order-details">
+                <div class="order-id-row">
+                  <span class="order-id">KC-001</span>
+                  <span class="order-date">📅 15 jan. 2026</span>
+                  <span class="badge badge-pending">⏳ En attente</span>
+                </div>
+                <div class="order-detail-grid">
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Article</span>
+                    <span class="order-detail-value">Robe fleurie 18 mois</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Taille</span>
+                    <span class="order-detail-value">18 mois</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">État</span>
+                    <span class="order-detail-value">Neuf ✨</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Prix</span>
+                    <span class="order-price">12 ⊙</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-actions">
+                <a href="Filtres.html" class="btn btn-outline" style="font-size:12px;">🔍 Voir similaires</a>
+                <label for="cancel-1" class="cancel-order-lbl" aria-label="Annuler la commande KC-001">
+                  <span class="lbl-cancel">✕ Annuler</span>
+                  <span class="lbl-cancelled">Annulée</span>
+                </label>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Order 2 -->
+        <input type="checkbox" class="cancel-order-toggle" id="cancel-2">
+        <div class="order-wrap">
+          <article class="order-card" aria-label="Commande KC-002">
+            <div class="order-accent" aria-hidden="true"></div>
+            <div class="order-body">
+              <div class="order-img" aria-hidden="true">👟</div>
+              <div class="order-details">
+                <div class="order-id-row">
+                  <span class="order-id">KC-002</span>
+                  <span class="order-date">📅 12 jan. 2026</span>
+                  <span class="badge badge-active">✅ Confirmée</span>
+                </div>
+                <div class="order-detail-grid">
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Article</span>
+                    <span class="order-detail-value">Baskets sport P.24</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Taille</span>
+                    <span class="order-detail-value">Pointure 24</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">État</span>
+                    <span class="order-detail-value">Très bon état ⭐</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Prix</span>
+                    <span class="order-price">18 ⊙</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-actions">
+                <a href="Filtres.html" class="btn btn-outline" style="font-size:12px;">🔍 Voir similaires</a>
+                <label for="cancel-2" class="cancel-order-lbl" aria-label="Annuler la commande KC-002">
+                  <span class="lbl-cancel">✕ Annuler</span>
+                  <span class="lbl-cancelled">Annulée</span>
+                </label>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Order 3 -->
+        <input type="checkbox" class="cancel-order-toggle" id="cancel-3">
+        <div class="order-wrap">
+          <article class="order-card" aria-label="Commande KC-003">
+            <div class="order-accent" aria-hidden="true"></div>
+            <div class="order-body">
+              <div class="order-img" aria-hidden="true">🧥</div>
+              <div class="order-details">
+                <div class="order-id-row">
+                  <span class="order-id">KC-003</span>
+                  <span class="order-date">📅 8 jan. 2026</span>
+                  <span class="badge badge-active">✅ Confirmée</span>
+                </div>
+                <div class="order-detail-grid">
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Article</span>
+                    <span class="order-detail-value">Manteau chaud 3 ans</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Taille</span>
+                    <span class="order-detail-value">3 ans</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">État</span>
+                    <span class="order-detail-value">Bon état 👍</span>
+                  </div>
+                  <div class="order-detail-item">
+                    <span class="order-detail-label">Prix</span>
+                    <span class="order-price">24 ⊙</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-actions">
+                <a href="Filtres.html" class="btn btn-outline" style="font-size:12px;">🔍 Voir similaires</a>
+                <label for="cancel-3" class="cancel-order-lbl" aria-label="Annuler la commande KC-003">
+                  <span class="lbl-cancel">✕ Annuler</span>
+                  <span class="lbl-cancelled">Annulée</span>
+                </label>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="images/Kidcycle.svg" alt="KidCycle" style="height:36px;margin-bottom:8px;">
+        <p class="footer-brand-text">La marketplace des vêtements enfants. Achetez, vendez, recyclez en toute sécurité.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="Filtres.html">🏠 Accueil</a></li>
+          <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+          <li><a href="Vente.html">💰 Vente</a></li>
+          <li><a href="Produits.html">📦 Mes Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Mon Compte</h4>
+        <ul class="footer-links">
+          <li><a href="Commandes.html">🛒 Commandes</a></li>
+          <li><a href="Favoris.html">♥ Favoris</a></li>
+          <li><a href="AjoutProduit.html">➕ Ajouter un produit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Aide</h4>
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2026 KidCycle. Tous droits réservés.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+</body>
+</html>
