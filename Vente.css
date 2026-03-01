@@ -1,0 +1,43 @@
+/* Vente — Sell page styles */
+
+.sell-hero {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 60%, #fff8e6 100%);
+  padding: 80px 24px; text-align: center;
+}
+.sell-hero-title { font-size: 36px; font-weight: 900; color: var(--text-dark); margin-bottom: 16px; }
+.sell-hero-sub { font-size: 16px; color: var(--text-mid); max-width: 500px; margin: 0 auto 32px; }
+
+.how-section { max-width: 1200px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+.how-title { font-size: 26px; font-weight: 900; color: var(--text-dark); margin-bottom: 40px; }
+.steps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.step-card {
+  background: white; border-radius: var(--radius);
+  padding: 36px 28px; box-shadow: var(--card-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border-top: 4px solid var(--purple-btn);
+}
+.step-card:hover { transform: translateY(-6px); box-shadow: var(--card-hover-shadow); }
+.step-icon { font-size: 40px; margin-bottom: 16px; }
+.step-num { font-size: 12px; font-weight: 800; color: var(--purple); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+.step-card-title { font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; }
+.step-card-desc { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+
+.tips-section { background: var(--purple-bg); padding: 64px 24px; }
+.tips-inner { max-width: 1200px; margin: 0 auto; }
+.tips-title { font-size: 22px; font-weight: 900; color: var(--text-dark); margin-bottom: 28px; text-align: center; }
+.tips-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.tip-item {
+  background: white; border-radius: var(--radius-sm);
+  padding: 20px; display: flex; gap: 14px; align-items: flex-start;
+  box-shadow: var(--card-shadow);
+}
+.tip-icon { font-size: 28px; flex-shrink: 0; }
+.tip-text h4 { font-size: 14px; font-weight: 800; color: var(--text-dark); margin-bottom: 4px; }
+.tip-text p { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+
+@media (max-width: 700px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .tips-grid { grid-template-columns: 1fr; }
+}

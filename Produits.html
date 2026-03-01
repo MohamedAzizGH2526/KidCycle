@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mes Produits — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css" />
+  <link rel="stylesheet" href="Produits.css" />
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="KidCycle — Accueil">
+        <img src="images/Kidcycle.png" alt="KidCycle logo" />
+        <span class="nav-logo-text">KidCycle</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"      class="nav-link">Accueil</a>
+        <a href="Nouveautes.html" class="nav-link">Nouveautés</a>
+        <a href="Vente.html"      class="nav-link">Vente</a>
+        <a href="Favoris.html"    class="nav-link">Favoris</a>
+        <a href="#panier"         class="nav-link cart-badge">
+          Panier <span class="badge-count">2</span>
+        </a>
+      </div>
+      <form class="nav-search" role="search" aria-label="Recherche">
+        <img src="images/search.png" alt="" aria-hidden="true" />
+        <input type="search" placeholder="Rechercher…" aria-label="Rechercher des articles" />
+      </form>
+    </div>
+  </nav>
+
+  <!-- ── Breadcrumb ── -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span>›</span>
+    <a href="#">Mon Compte</a>
+    <span>›</span>
+    <span>Produits</span>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main id="main" class="page-content">
+    <div class="account-layout">
+
+      <!-- ── Sidebar ── -->
+      <aside class="sidebar" aria-label="Navigation du compte">
+        <div class="sidebar-profile">
+          <div class="sidebar-avatar" aria-hidden="true">👤</div>
+          <span class="sidebar-name">Sarah M.</span>
+          <span class="sidebar-email">sarah@email.com</span>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="Commandes.html" class="sidebar-link">📦 Commandes</a>
+          <a href="Favoris.html"   class="sidebar-link">💜 Favoris</a>
+          <a href="Produits.html"  class="sidebar-link active">🏷️ Produits</a>
+          <a href="#"              class="sidebar-link">⚙️ Paramètres</a>
+        </nav>
+      </aside>
+
+      <!-- ── Content ── -->
+      <section>
+
+        <!-- Top bar -->
+        <div class="produits-topbar" style="margin-bottom:24px;">
+          <h1 class="page-title">Mes Produits</h1>
+          <a href="AjoutProduit.html" class="btn btn-primary btn-add">＋ Ajouter un produit</a>
+        </div>
+
+        <!-- Stats bar -->
+        <div class="stats-bar" role="list">
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">8</span>
+            <span class="stat-lbl">Produits</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">5</span>
+            <span class="stat-lbl">Actifs</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">3</span>
+            <span class="stat-lbl">En attente</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">240</span>
+            <span class="stat-lbl">Coins gagnés</span>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="product-tabs" role="tablist">
+          <input type="radio" name="tab" id="tab-all" class="tab-toggle" checked />
+          <label class="tab-label" for="tab-all" role="tab">Tous (8)</label>
+
+          <input type="radio" name="tab" id="tab-active" class="tab-toggle" />
+          <label class="tab-label" for="tab-active" role="tab">Actifs (5)</label>
+
+          <input type="radio" name="tab" id="tab-pending" class="tab-toggle" />
+          <label class="tab-label" for="tab-pending" role="tab">En attente (3)</label>
+        </div>
+
+        <!-- Product cards -->
+
+        <!-- Card 1 -->
+        <div class="card-wrap">
+          <input type="checkbox" class="cancel-toggle" id="cancel1" />
+          <input type="checkbox" class="delete-toggle" id="delete1" />
+          <article class="product-card" style="display:flex;gap:16px;padding:20px;margin-bottom:16px;border-radius:var(--radius);transition:opacity .3s,transform .3s,filter .3s;">
+            <img src="images/Rectangle 10.png" alt="Robe fleurie"
+                 style="width:80px;height:80px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" />
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+              <p style="font-size:15px;font-weight:800;color:var(--text-dark);">Robe fleurie 3-4 ans</p>
+              <p style="font-size:13px;color:var(--text-mid);">
+                <span class="status-dot active"></span>
+                <span style="font-weight:700;color:var(--success);">Actif</span>
+              </p>
+              <p style="font-size:16px;font-weight:900;color:var(--gold);">🪙 45 Coins</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;justify-content:center;">
+              <button class="btn btn-outline" style="font-size:12px;padding:6px 14px;">✏️ Modifier</button>
+              <label class="btn btn-outline cancel-lbl" for="cancel1" style="font-size:12px;padding:6px 14px;cursor:pointer;">
+                <span class="lbl-annuler">⏸ Suspendre</span>
+                <span class="lbl-annule">✓ Suspendu</span>
+              </label>
+              <label class="btn btn-danger delete-lbl" for="delete1" style="font-size:12px;padding:6px 14px;cursor:pointer;">
+                <span class="lbl-suppr">🗑 Supprimer</span>
+                <span class="lbl-supprime">✓ Supprimé</span>
+              </label>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-wrap">
+          <input type="checkbox" class="cancel-toggle" id="cancel2" />
+          <input type="checkbox" class="delete-toggle" id="delete2" />
+          <article class="product-card" style="display:flex;gap:16px;padding:20px;margin-bottom:16px;border-radius:var(--radius);transition:opacity .3s,transform .3s,filter .3s;">
+            <img src="images/Rectangle 9.png" alt="Pantalon jean"
+                 style="width:80px;height:80px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" />
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+              <p style="font-size:15px;font-weight:800;color:var(--text-dark);">Pantalon jean 2-3 ans</p>
+              <p style="font-size:13px;color:var(--text-mid);">
+                <span class="status-dot pending"></span>
+                <span style="font-weight:700;color:var(--gold);">En attente</span>
+              </p>
+              <p style="font-size:16px;font-weight:900;color:var(--gold);">🪙 30 Coins</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;justify-content:center;">
+              <button class="btn btn-outline" style="font-size:12px;padding:6px 14px;">✏️ Modifier</button>
+              <label class="btn btn-outline cancel-lbl" for="cancel2" style="font-size:12px;padding:6px 14px;cursor:pointer;">
+                <span class="lbl-annuler">⏸ Suspendre</span>
+                <span class="lbl-annule">✓ Suspendu</span>
+              </label>
+              <label class="btn btn-danger delete-lbl" for="delete2" style="font-size:12px;padding:6px 14px;cursor:pointer;">
+                <span class="lbl-suppr">🗑 Supprimer</span>
+                <span class="lbl-supprime">✓ Supprimé</span>
+              </label>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-wrap">
+          <input type="checkbox" class="cancel-toggle" id="cancel3" />
+          <input type="checkbox" class="delete-toggle" id="delete3" />
+          <article class="product-card" style="display:flex;gap:16px;padding:20px;margin-bottom:16px;border-radius:var(--radius);transition:opacity .3s,transform .3s,filter .3s;">
+            <img src="images/Rectangle 10 (1).png" alt="Pull doux"
+                 style="width:80px;height:80px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" />
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+              <p style="font-size:15px;font-weight:800;color:var(--text-dark);">Pull doux 12-18 mois</p>
+              <p style="font-size:13px;color:var(--text-mid);">
+                <span class="status-dot active"></span>
+                <span style="font-weight:700;color:var(--success);">Actif</span>
+              </p>
+              <p style="font-size:16px;font-weight:900;color:var(--gold);">🪙 25 Coins</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;justify-content:center;">
+              <button class="btn btn-outline" style="font-size:12px;padding:6px 14px;">✏️ Modifier</button>
+              <label class="btn btn-outline cancel-lbl" for="cancel3" style="font-size:12px;padding:6px 14px;cursor:pointer;">
+                <span class="lbl-annuler">⏸ Suspendre</span>
+                <span class="lbl-annule">✓ Suspendu</span>
+              </label>
+              <label class="btn btn-danger delete-lbl" for="delete3" style="font-size:12px;padding:6px 14px;cursor:pointer;">
+                <span class="lbl-suppr">🗑 Supprimer</span>
+                <span class="lbl-supprime">✓ Supprimé</span>
+              </label>
+            </div>
+          </article>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-logo-text">KidCycle</p>
+        <p class="footer-tagline">La marketplace de vêtements enfants d'occasion. Achetez et vendez facilement !</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Nouveautes.html">Nouveautés</a></li>
+          <li><a href="Vente.html">Vente</a></li>
+          <li><a href="Filtres.html">Filtres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Mon Compte</h4>
+        <ul>
+          <li><a href="Commandes.html">Commandes</a></li>
+          <li><a href="Favoris.html">Favoris</a></li>
+          <li><a href="Produits.html">Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 KidCycle. Tous droits réservés.</span>
+      <span>Fait avec 💜 pour les petits</span>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+
+</body>
+</html>

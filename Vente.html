@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vente — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css" />
+  <link rel="stylesheet" href="Vente.css" />
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="KidCycle — Accueil">
+        <img src="images/Kidcycle.png" alt="KidCycle logo" />
+        <span class="nav-logo-text">KidCycle</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"      class="nav-link">Accueil</a>
+        <a href="Nouveautes.html" class="nav-link">Nouveautés</a>
+        <a href="Vente.html"      class="nav-link active">Vente</a>
+        <a href="Favoris.html"    class="nav-link">Favoris</a>
+        <a href="#panier"         class="nav-link cart-badge">
+          Panier <span class="badge-count">2</span>
+        </a>
+      </div>
+      <form class="nav-search" role="search" aria-label="Recherche">
+        <img src="images/search.png" alt="" aria-hidden="true" />
+        <input type="search" placeholder="Rechercher…" aria-label="Rechercher des articles" />
+      </form>
+    </div>
+  </nav>
+
+  <!-- ── Breadcrumb ── -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span>›</span>
+    <span>Vente</span>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main id="main" class="page-content">
+
+    <!-- Sell hero -->
+    <header class="sell-hero">
+      <h1 class="sell-hero-title">Vendez les vêtements de vos enfants 👗</h1>
+      <p class="sell-hero-sub">Donnez une seconde vie aux habits de vos petits et gagnez des Coins pour acheter de nouvelles pièces !</p>
+      <a href="AjoutProduit.html" class="btn btn-primary" style="font-size:16px;padding:14px 36px;">
+        Commencer à vendre
+      </a>
+    </header>
+
+    <!-- How it works -->
+    <section class="how-section" aria-labelledby="how-title">
+      <h2 class="how-title" id="how-title">Comment ça marche ?</h2>
+      <div class="steps-grid">
+
+        <article class="step-card">
+          <div class="step-icon">📸</div>
+          <p class="step-num">Étape 1</p>
+          <h3 class="step-card-title">Ajoutez votre article</h3>
+          <p class="step-card-desc">Prenez de belles photos, décrivez l'état et la taille de l'article, fixez votre prix en Coins.</p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-icon">💬</div>
+          <p class="step-num">Étape 2</p>
+          <h3 class="step-card-title">Recevez des offres</h3>
+          <p class="step-card-desc">Les acheteurs intéressés vous contactent directement. Validez la vente en un clic !</p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-icon">🎉</div>
+          <p class="step-num">Étape 3</p>
+          <h3 class="step-card-title">Expédiez &amp; gagnez</h3>
+          <p class="step-card-desc">Envoyez le colis et recevez vos Coins directement sur votre compte KidCycle.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Tips section -->
+    <section class="tips-section" aria-labelledby="tips-title">
+      <div class="tips-inner">
+        <h2 class="tips-title" id="tips-title">💡 Nos conseils pour vendre rapidement</h2>
+        <div class="tips-grid">
+
+          <div class="tip-item">
+            <span class="tip-icon">📷</span>
+            <div class="tip-text">
+              <h4>Photos de qualité</h4>
+              <p>Prenez vos photos en pleine lumière naturelle, sur fond neutre. Plusieurs angles augmentent les chances de vente.</p>
+            </div>
+          </div>
+
+          <div class="tip-item">
+            <span class="tip-icon">🏷️</span>
+            <div class="tip-text">
+              <h4>Prix compétitif</h4>
+              <p>Proposez un prix juste en vous basant sur l'état de l'article et les prix similaires sur la marketplace.</p>
+            </div>
+          </div>
+
+          <div class="tip-item">
+            <span class="tip-icon">📝</span>
+            <div class="tip-text">
+              <h4>Description détaillée</h4>
+              <p>Mentionnez la marque, la taille, l'état, les petits défauts éventuels. Soyez transparent pour éviter les retours.</p>
+            </div>
+          </div>
+
+          <div class="tip-item">
+            <span class="tip-icon">🚀</span>
+            <div class="tip-text">
+              <h4>Répondez vite</h4>
+              <p>Les acheteurs apprécient la réactivité. Répondez aux questions rapidement pour conclure la vente.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA bottom -->
+    <section style="text-align:center;padding:80px 24px;">
+      <h2 style="font-size:28px;font-weight:900;color:var(--text-dark);margin-bottom:16px;">Prêt·e à commencer ?</h2>
+      <p style="font-size:16px;color:var(--text-mid);margin-bottom:32px;">Rejoignez des milliers de parents qui donnent une seconde vie aux vêtements de leurs enfants.</p>
+      <a href="AjoutProduit.html" class="btn btn-primary" style="font-size:16px;padding:14px 40px;">
+        ＋ Publier mon premier article
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-logo-text">KidCycle</p>
+        <p class="footer-tagline">La marketplace de vêtements enfants d'occasion. Achetez et vendez facilement !</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Nouveautes.html">Nouveautés</a></li>
+          <li><a href="Vente.html">Vente</a></li>
+          <li><a href="Filtres.html">Filtres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Mon Compte</h4>
+        <ul>
+          <li><a href="Commandes.html">Commandes</a></li>
+          <li><a href="Favoris.html">Favoris</a></li>
+          <li><a href="Produits.html">Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 KidCycle. Tous droits réservés.</span>
+      <span>Fait avec 💜 pour les petits</span>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+
+</body>
+</html>

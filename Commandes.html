@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mes Commandes — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css" />
+  <link rel="stylesheet" href="Commandes.css" />
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="KidCycle — Accueil">
+        <img src="images/Kidcycle.png" alt="KidCycle logo" />
+        <span class="nav-logo-text">KidCycle</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"      class="nav-link">Accueil</a>
+        <a href="Nouveautes.html" class="nav-link">Nouveautés</a>
+        <a href="Vente.html"      class="nav-link">Vente</a>
+        <a href="Favoris.html"    class="nav-link">Favoris</a>
+        <a href="#panier"         class="nav-link cart-badge">
+          Panier <span class="badge-count">2</span>
+        </a>
+      </div>
+      <form class="nav-search" role="search" aria-label="Recherche">
+        <img src="images/search.png" alt="" aria-hidden="true" />
+        <input type="search" placeholder="Rechercher…" aria-label="Rechercher des articles" />
+      </form>
+    </div>
+  </nav>
+
+  <!-- ── Breadcrumb ── -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span>›</span>
+    <a href="#">Mon Compte</a>
+    <span>›</span>
+    <span>Commandes</span>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main id="main" class="page-content">
+    <div class="account-layout">
+
+      <!-- ── Sidebar ── -->
+      <aside class="sidebar" aria-label="Navigation du compte">
+        <div class="sidebar-profile">
+          <div class="sidebar-avatar" aria-hidden="true">👤</div>
+          <span class="sidebar-name">Sarah M.</span>
+          <span class="sidebar-email">sarah@email.com</span>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="Commandes.html" class="sidebar-link active">📦 Commandes</a>
+          <a href="Favoris.html"   class="sidebar-link">💜 Favoris</a>
+          <a href="Produits.html"  class="sidebar-link">🏷️ Produits</a>
+          <a href="#"              class="sidebar-link">⚙️ Paramètres</a>
+        </nav>
+      </aside>
+
+      <!-- ── Content ── -->
+      <section>
+
+        <!-- Page title -->
+        <header style="margin-bottom:24px;">
+          <h1 class="page-title">Mes Commandes</h1>
+        </header>
+
+        <!-- Stats bar -->
+        <div class="stats-bar" role="list">
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">12</span>
+            <span class="stat-lbl">Total</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">3</span>
+            <span class="stat-lbl">En attente</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">9</span>
+            <span class="stat-lbl">Confirmées</span>
+          </div>
+          <div class="stat-chip" role="listitem">
+            <span class="stat-val">240</span>
+            <span class="stat-lbl">Coins dépensés</span>
+          </div>
+        </div>
+
+        <!-- Order stepper -->
+        <div class="order-stepper" aria-label="Progression de la commande">
+          <div class="step done">
+            <div class="step-circle">✓</div>
+            <span class="step-label">Créée</span>
+          </div>
+          <div class="step done">
+            <div class="step-circle">✓</div>
+            <span class="step-label">Adresse</span>
+          </div>
+          <div class="step active">
+            <div class="step-circle">3</div>
+            <span class="step-label">Validation</span>
+          </div>
+          <div class="step">
+            <div class="step-circle">4</div>
+            <span class="step-label">Livraison</span>
+          </div>
+        </div>
+
+        <!-- Order card 1 -->
+        <article class="order-card">
+          <header class="order-header">
+            <div>
+              <span class="order-id">#CMD-2024-001</span>
+              <span class="date-tag">15 Fév 2024</span>
+            </div>
+            <span class="status-badge pending">En attente</span>
+          </header>
+          <div class="order-body">
+            <div class="order-detail-grid">
+              <img src="images/Rectangle 10.png" alt="Robe fleurie" class="order-img" />
+              <div class="order-info">
+                <h3>Robe fleurie printemps</h3>
+                <div class="order-meta">
+                  <span class="meta-tag">Très bon état</span>
+                  <span class="meta-tag">3-4 ans</span>
+                </div>
+                <span class="order-price">🪙 45 Coins</span>
+              </div>
+            </div>
+          </div>
+          <footer class="order-footer">
+            <button class="btn btn-danger">Annuler la commande</button>
+          </footer>
+        </article>
+
+        <!-- Order card 2 -->
+        <article class="order-card">
+          <header class="order-header">
+            <div>
+              <span class="order-id">#CMD-2024-002</span>
+              <span class="date-tag">10 Fév 2024</span>
+            </div>
+            <span class="status-badge confirmed">Confirmée</span>
+          </header>
+          <div class="order-body">
+            <div class="order-detail-grid">
+              <img src="images/Rectangle 9.png" alt="Pantalon jean" class="order-img" />
+              <div class="order-info">
+                <h3>Pantalon jean confort</h3>
+                <div class="order-meta">
+                  <span class="meta-tag">Très bon état</span>
+                  <span class="meta-tag">3-4 ans</span>
+                </div>
+                <span class="order-price">🪙 45 Coins</span>
+              </div>
+            </div>
+          </div>
+          <footer class="order-footer">
+            <button class="btn btn-danger">Annuler la commande</button>
+          </footer>
+        </article>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-logo-text">KidCycle</p>
+        <p class="footer-tagline">La marketplace de vêtements enfants d'occasion. Achetez et vendez facilement !</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Nouveautes.html">Nouveautés</a></li>
+          <li><a href="Vente.html">Vente</a></li>
+          <li><a href="Filtres.html">Filtres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Mon Compte</h4>
+        <ul>
+          <li><a href="Commandes.html">Commandes</a></li>
+          <li><a href="Favoris.html">Favoris</a></li>
+          <li><a href="Produits.html">Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 KidCycle. Tous droits réservés.</span>
+      <span>Fait avec 💜 pour les petits</span>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+
+</body>
+</html>

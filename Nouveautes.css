@@ -1,0 +1,66 @@
+/* Nouveautes — New Arrivals page styles */
+
+.new-hero {
+  background: linear-gradient(135deg, var(--purple-deep) 0%, #6b5fa0 40%, var(--purple) 100%);
+  padding: 80px 24px; text-align: center; position: relative; overflow: hidden;
+}
+.hero-circle {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  animation: heroFloat 6s ease-in-out infinite;
+}
+.hero-circle:nth-child(1) { width: 200px; height: 200px; top: -60px; left: -60px; animation-delay: 0s; }
+.hero-circle:nth-child(2) { width: 150px; height: 150px; top: 40px; right: -40px; animation-delay: 2s; }
+.hero-circle:nth-child(3) { width: 100px; height: 100px; bottom: -30px; left: 30%; animation-delay: 4s; }
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+.hero-content { position: relative; z-index: 1; }
+.hero-title { font-size: 40px; font-weight: 900; color: white; margin-bottom: 12px; }
+.hero-subtitle { font-size: 16px; color: rgba(255,255,255,.8); }
+
+.nouveau-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--text-dark); font-size: 10px; font-weight: 800;
+  padding: 3px 10px; border-radius: 99px;
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+}
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+.nouveau-badge::before { content: '✨'; animation: sparkle 1.5s ease infinite; }
+
+.time-tag {
+  font-size: 10px; font-weight: 700; color: var(--text-light);
+  background: white; padding: 2px 8px; border-radius: 99px;
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+
+.new-card {
+  border: 1.5px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, var(--purple-btn), var(--gold)) border-box;
+  box-shadow: 0 4px 20px rgba(155,142,196,.15);
+}
+.new-card:hover { box-shadow: 0 8px 30px rgba(155,142,196,.25); }
+
+.section-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+}
+.section-title { font-size: 20px; font-weight: 900; color: var(--text-dark); }
+.count-chip {
+  background: linear-gradient(135deg, var(--purple-btn), var(--purple));
+  color: white; font-size: 11px; font-weight: 800;
+  padding: 3px 10px; border-radius: 99px;
+}
+
+.new-section { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+
+.new-cards-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}

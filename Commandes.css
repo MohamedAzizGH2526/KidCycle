@@ -1,0 +1,79 @@
+/* Commandes — Order page styles */
+
+.order-stepper {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; margin-bottom: 32px; background: white;
+  border-radius: var(--radius); padding: 28px 24px;
+  box-shadow: var(--card-shadow);
+}
+.step {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  position: relative; flex: 1;
+}
+.step:not(:last-child)::after {
+  content: ''; position: absolute;
+  top: 18px; left: calc(50% + 18px); right: calc(-50% + 18px);
+  height: 2px; background: var(--purple-bg);
+}
+.step.done:not(:last-child)::after { background: var(--purple-btn); }
+.step-circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--purple-bg); display: flex; align-items: center;
+  justify-content: center; font-size: 13px; font-weight: 800;
+  color: var(--text-light); border: 2px solid var(--purple-bg);
+  z-index: 1; position: relative;
+}
+.step.done .step-circle {
+  background: linear-gradient(135deg, var(--purple-btn), var(--purple-deep));
+  color: white; border-color: transparent;
+}
+.step.active .step-circle {
+  background: white; color: var(--purple-deep);
+  border-color: var(--purple); box-shadow: 0 0 0 4px rgba(155,142,196,.15);
+}
+.step-label { font-size: 11px; font-weight: 700; color: var(--text-light); }
+.step.done .step-label, .step.active .step-label { color: var(--purple-deep); }
+
+.order-card {
+  background: white; border-radius: var(--radius);
+  box-shadow: var(--card-shadow); margin-bottom: 20px;
+  border-left: 4px solid transparent;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  overflow: hidden;
+}
+.order-card:hover {
+  border-left-color: var(--purple-btn);
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-2px);
+}
+.order-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px; border-bottom: 1px solid var(--purple-bg);
+}
+.order-id { font-size: 15px; font-weight: 800; color: var(--text-dark); }
+.date-tag {
+  font-size: 11px; font-weight: 600; color: var(--text-light);
+  background: var(--purple-bg); padding: 2px 8px; border-radius: 99px; margin-left: 8px;
+}
+.status-badge {
+  padding: 4px 12px; border-radius: 99px; font-size: 12px; font-weight: 700;
+}
+.status-badge.pending { background: rgba(232,184,75,.15); color: var(--gold); }
+.status-badge.confirmed { background: var(--success-light); color: var(--success); }
+.order-body { padding: 20px; }
+.order-detail-grid {
+  display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start;
+}
+.order-img { width: 80px; height: 80px; border-radius: var(--radius-sm); object-fit: cover; }
+.order-info { display: flex; flex-direction: column; gap: 6px; }
+.order-info h3 { font-size: 15px; font-weight: 800; color: var(--text-dark); }
+.order-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.meta-tag {
+  font-size: 11px; font-weight: 600; padding: 3px 10px;
+  border-radius: 99px; background: var(--purple-bg); color: var(--text-mid);
+}
+.order-price { font-size: 18px; font-weight: 900; color: var(--gold); }
+.order-footer {
+  padding: 12px 20px; background: var(--purple-bg);
+  display: flex; justify-content: flex-end;
+}
