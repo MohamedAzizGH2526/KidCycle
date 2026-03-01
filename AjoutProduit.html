@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajouter un produit — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css" />
+  <link rel="stylesheet" href="AjoutProduit.css" />
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="KidCycle — Accueil">
+        <img src="images/Kidcycle.png" alt="KidCycle logo" />
+        <span class="nav-logo-text">KidCycle</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"      class="nav-link">Accueil</a>
+        <a href="Nouveautes.html" class="nav-link">Nouveautés</a>
+        <a href="Vente.html"      class="nav-link">Vente</a>
+        <a href="Favoris.html"    class="nav-link">Favoris</a>
+        <a href="#panier"         class="nav-link cart-badge">
+          Panier <span class="badge-count">2</span>
+        </a>
+      </div>
+      <form class="nav-search" role="search" aria-label="Recherche">
+        <img src="images/search.png" alt="" aria-hidden="true" />
+        <input type="search" placeholder="Rechercher…" aria-label="Rechercher des articles" />
+      </form>
+    </div>
+  </nav>
+
+  <!-- ── Breadcrumb ── -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span>›</span>
+    <a href="#">Mon Compte</a>
+    <span>›</span>
+    <span>Ajouter un produit</span>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main id="main" class="page-content">
+
+    <!-- Form progress stepper -->
+    <div class="form-stepper" aria-label="Étapes du formulaire">
+      <div class="fstep active">
+        <div class="fstep-circle">1</div>
+        <span class="fstep-label">Détails</span>
+      </div>
+      <div class="fstep">
+        <div class="fstep-circle">2</div>
+        <span class="fstep-label">Photos</span>
+      </div>
+      <div class="fstep">
+        <div class="fstep-circle">3</div>
+        <span class="fstep-label">Publier</span>
+      </div>
+    </div>
+
+    <div class="ajout-layout">
+
+      <!-- ── Left: Form ── -->
+      <div>
+        <form class="form-card" novalidate>
+          <h2 class="form-card-title">📋 Détails du produit</h2>
+
+          <div style="display:flex;flex-direction:column;gap:20px;">
+
+            <!-- Product ID + Title -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="prod-id">Référence produit</label>
+                <input class="form-input" type="text" id="prod-id" placeholder="Ex: ROBE-001" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="prod-title">Titre de l'article</label>
+                <input class="form-input" type="text" id="prod-title" placeholder="Ex: Robe fleurie 3-4 ans" />
+              </div>
+            </div>
+
+            <!-- Condition -->
+            <div class="form-group">
+              <span class="form-label">État de l'article</span>
+              <div class="condition-grid">
+                <input type="radio" name="condition" id="cond-neuf" class="cond-radio" value="neuf" />
+                <label class="cond-lbl" for="cond-neuf">
+                  <span class="cond-icon">⭐</span>
+                  <span class="cond-name">Neuf</span>
+                </label>
+
+                <input type="radio" name="condition" id="cond-tresbon" class="cond-radio" value="tres-bon" />
+                <label class="cond-lbl" for="cond-tresbon">
+                  <span class="cond-icon">👍</span>
+                  <span class="cond-name">Très bon</span>
+                </label>
+
+                <input type="radio" name="condition" id="cond-bon" class="cond-radio" value="bon" />
+                <label class="cond-lbl" for="cond-bon">
+                  <span class="cond-icon">👌</span>
+                  <span class="cond-name">Bon</span>
+                </label>
+
+                <input type="radio" name="condition" id="cond-acceptable" class="cond-radio" value="acceptable" />
+                <label class="cond-lbl" for="cond-acceptable">
+                  <span class="cond-icon">📦</span>
+                  <span class="cond-name">Acceptable</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Genre + Taille -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="genre">Genre</label>
+                <select class="form-select" id="genre">
+                  <option value="">Sélectionner…</option>
+                  <option value="fille">Fille</option>
+                  <option value="garcon">Garçon</option>
+                  <option value="unisexe">Unisexe</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="taille">Taille</label>
+                <select class="form-select" id="taille">
+                  <option value="">Sélectionner…</option>
+                  <option value="0-3m">0-3 mois</option>
+                  <option value="3-6m">3-6 mois</option>
+                  <option value="6-12m">6-12 mois</option>
+                  <option value="12-18m">12-18 mois</option>
+                  <option value="18-24m">18-24 mois</option>
+                  <option value="2-3ans">2-3 ans</option>
+                  <option value="3-4ans">3-4 ans</option>
+                  <option value="4-5ans">4-5 ans</option>
+                  <option value="5-6ans">5-6 ans</option>
+                  <option value="6-7ans">6-7 ans</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Catégorie -->
+            <div class="form-group">
+              <label class="form-label" for="categorie">Catégorie</label>
+              <select class="form-select" id="categorie">
+                <option value="">Sélectionner…</option>
+                <option value="hauts">Hauts</option>
+                <option value="bas">Bas</option>
+                <option value="robes">Robes</option>
+                <option value="manteaux">Manteaux</option>
+                <option value="chaussures">Chaussures</option>
+                <option value="accessoires">Accessoires</option>
+              </select>
+            </div>
+
+            <!-- Price -->
+            <div class="form-group">
+              <label class="form-label" for="prix">Prix (en Coins)</label>
+              <div class="price-wrap">
+                <span class="price-prefix" aria-hidden="true">🪙</span>
+                <input class="form-input price-input" type="number" id="prix" min="1" placeholder="Ex: 45" />
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label class="form-label" for="description">Description</label>
+              <textarea class="form-textarea" id="description" maxlength="300"
+                placeholder="Décrivez l'article : marque, couleur, état détaillé, défauts éventuels…"></textarea>
+              <span style="font-size:11px;color:var(--text-light);">0/300 caractères</span>
+            </div>
+
+            <!-- Publish button + modal -->
+            <div>
+              <input type="checkbox" class="publish-toggle" id="publish-modal" />
+              <label class="publish-lbl" for="publish-modal">
+                🚀 Publier l'article
+              </label>
+
+              <!-- Success modal -->
+              <div class="modal-overlay-wrap" style="
+                position:fixed;inset:0;z-index:200;
+                background:rgba(61,51,83,.45);
+                backdrop-filter:blur(6px);
+                align-items:center;justify-content:center;">
+                <div class="modal-box">
+                  <div style="font-size:56px;margin-bottom:16px;">✅</div>
+                  <h2 style="font-size:24px;font-weight:900;color:var(--text-dark);margin-bottom:8px;">Article publié !</h2>
+                  <p style="font-size:15px;color:var(--text-mid);margin-bottom:28px;">Votre article est maintenant visible sur la marketplace KidCycle.</p>
+                  <a href="Produits.html" class="btn btn-primary" style="font-size:15px;padding:12px 28px;">
+                    Voir mes produits
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- ── Right: Photo upload ── -->
+      <aside class="photo-panel" aria-label="Ajouter des photos">
+        <h3 class="photo-panel-title">📷 Photos du produit</h3>
+        <div class="photo-grid">
+          <!-- Main photo zone -->
+          <div class="photo-zone main" role="button" tabindex="0" aria-label="Ajouter la photo principale">
+            <span class="zone-icon">📷</span>
+            <span>Photo principale</span>
+            <span style="font-size:10px;color:var(--text-light);">Glissez ou cliquez pour ajouter</span>
+          </div>
+          <!-- Secondary photo zones -->
+          <div class="photo-zone" role="button" tabindex="0" aria-label="Ajouter une photo">
+            <span class="zone-icon">📷</span>
+            <span>Ajouter une photo</span>
+          </div>
+          <div class="photo-zone" role="button" tabindex="0" aria-label="Ajouter une photo">
+            <span class="zone-icon">📷</span>
+            <span>Ajouter une photo</span>
+          </div>
+          <div class="photo-zone" role="button" tabindex="0" aria-label="Ajouter une photo">
+            <span class="zone-icon">📷</span>
+            <span>Ajouter une photo</span>
+          </div>
+          <div class="photo-zone" role="button" tabindex="0" aria-label="Ajouter une photo">
+            <span class="zone-icon">📷</span>
+            <span>Ajouter une photo</span>
+          </div>
+          <div class="photo-zone" role="button" tabindex="0" aria-label="Ajouter une photo">
+            <span class="zone-icon">📷</span>
+            <span>Ajouter une photo</span>
+          </div>
+        </div>
+
+        <!-- Photo tips -->
+        <div class="photo-tips" aria-label="Conseils photo">
+          <span class="tip-chip">📸 Photos claires</span>
+          <span class="tip-chip">🖼 Fond neutre</span>
+          <span class="tip-chip">🔄 Plusieurs angles</span>
+          <span class="tip-chip">☀️ Bonne luminosité</span>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-logo-text">KidCycle</p>
+        <p class="footer-tagline">La marketplace de vêtements enfants d'occasion. Achetez et vendez facilement !</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Nouveautes.html">Nouveautés</a></li>
+          <li><a href="Vente.html">Vente</a></li>
+          <li><a href="Filtres.html">Filtres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Mon Compte</h4>
+        <ul>
+          <li><a href="Commandes.html">Commandes</a></li>
+          <li><a href="Favoris.html">Favoris</a></li>
+          <li><a href="Produits.html">Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 KidCycle. Tous droits réservés.</span>
+      <span>Fait avec 💜 pour les petits</span>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+
+</body>
+</html>
