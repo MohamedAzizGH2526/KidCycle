@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favoris — KidCycle</title>
+  <link rel="stylesheet" href="Shared.css">
+  <link rel="stylesheet" href="Favoris.css">
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Navigation -->
+  <nav class="topnav" aria-label="Navigation principale">
+    <div class="nav-brand">
+      <a href="Filtres.html"><img class="logo" src="images/Kidcycle.svg" alt="KidCycle"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Filtres.html">🏠 Accueil</a></li>
+      <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+      <li><a href="Vente.html">💰 Vente</a></li>
+      <li><a href="Produits.html">📦 Mes Produits</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Commandes.html" class="btn btn-outline" style="font-size:13px;">🛒 Commandes</a>
+      <a href="Favoris.html" class="btn btn-outline" style="font-size:13px;">♥ Favoris</a>
+      <span class="coin-icon">⊙</span>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="Filtres.html">Accueil</a>
+    <span>›</span>
+    <span>Mes Favoris</span>
+  </nav>
+
+  <main id="main">
+    <div class="favoris-layout">
+
+      <!-- Count Bar -->
+      <div class="favoris-bar">
+        <div class="favoris-count-text">
+          ♥ Mes Favoris
+          <span class="favoris-count-badge">4 articles</span>
+        </div>
+        <div class="favoris-sort">
+          <label for="favoris-sort-sel">Trier :</label>
+          <select id="favoris-sort-sel" aria-label="Trier les favoris">
+            <option>Plus récents</option>
+            <option>Prix croissant</option>
+            <option>Prix décroissant</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Favorites Grid -->
+      <div class="favoris-grid">
+
+        <!-- Fav 1 -->
+        <div>
+          <input type="checkbox" class="heart-toggle" id="heart-1" checked>
+          <input type="checkbox" class="cart-toggle" id="cart-1">
+          <article class="fav-card" aria-label="Robe soleil, favori">
+            <div class="fav-card-img" style="background:linear-gradient(135deg,#f3f0fb,#e8e4f3);">
+              <div class="card-img-placeholder" style="background:linear-gradient(135deg,#f3f0fb,#e8e4f3);position:absolute;inset:0;font-size:52px;">👗</div>
+              <label for="heart-1" class="heart-btn" aria-label="Retirer des favoris">
+                <span class="heart-icon-empty" aria-hidden="true">🤍</span>
+                <span class="heart-icon-filled" aria-hidden="true">❤️</span>
+              </label>
+              <div class="quick-view-overlay">
+                <a href="Filtres.html" class="quick-view-link">👁 Voir le produit</a>
+              </div>
+            </div>
+            <div class="fav-card-body">
+              <h3 class="fav-card-title">Robe soleil rayures 12 mois</h3>
+              <div class="fav-card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 10</div>
+              <div class="fav-card-meta">
+                <span class="card-tag">Neuf ✨</span>
+                <span class="card-tag">12 mois</span>
+                <span class="card-tag card-tag-gold">Fille 👧</span>
+              </div>
+            </div>
+            <div class="fav-card-actions">
+              <label for="cart-1" class="cart-btn" role="button">
+                <span class="cart-btn-add">🛒 Ajouter au panier</span>
+                <span class="cart-btn-done">✅ Ajouté !</span>
+              </label>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fav 2 -->
+        <div>
+          <input type="checkbox" class="heart-toggle" id="heart-2" checked>
+          <input type="checkbox" class="cart-toggle" id="cart-2">
+          <article class="fav-card" aria-label="Manteau chaud, favori">
+            <div class="fav-card-img" style="background:linear-gradient(135deg,#fef8ee,#fdefd0);">
+              <div class="card-img-placeholder" style="background:linear-gradient(135deg,#fef8ee,#fdefd0);position:absolute;inset:0;font-size:52px;">🧥</div>
+              <label for="heart-2" class="heart-btn" aria-label="Retirer des favoris">
+                <span class="heart-icon-empty" aria-hidden="true">🤍</span>
+                <span class="heart-icon-filled" aria-hidden="true">❤️</span>
+              </label>
+              <div class="quick-view-overlay">
+                <a href="Filtres.html" class="quick-view-link">👁 Voir le produit</a>
+              </div>
+            </div>
+            <div class="fav-card-body">
+              <h3 class="fav-card-title">Manteau chaud hiver 3 ans</h3>
+              <div class="fav-card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 24</div>
+              <div class="fav-card-meta">
+                <span class="card-tag">Très bon état ⭐</span>
+                <span class="card-tag">3 ans</span>
+                <span class="card-tag">Mixte 🧒</span>
+              </div>
+            </div>
+            <div class="fav-card-actions">
+              <label for="cart-2" class="cart-btn" role="button">
+                <span class="cart-btn-add">🛒 Ajouter au panier</span>
+                <span class="cart-btn-done">✅ Ajouté !</span>
+              </label>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fav 3 -->
+        <div>
+          <input type="checkbox" class="heart-toggle" id="heart-3" checked>
+          <input type="checkbox" class="cart-toggle" id="cart-3">
+          <article class="fav-card" aria-label="Baskets premiers pas, favori">
+            <div class="fav-card-img" style="background:linear-gradient(135deg,#e4f5eb,#d0edd9);">
+              <div class="card-img-placeholder" style="background:linear-gradient(135deg,#e4f5eb,#d0edd9);position:absolute;inset:0;font-size:52px;">👟</div>
+              <label for="heart-3" class="heart-btn" aria-label="Retirer des favoris">
+                <span class="heart-icon-empty" aria-hidden="true">🤍</span>
+                <span class="heart-icon-filled" aria-hidden="true">❤️</span>
+              </label>
+              <div class="quick-view-overlay">
+                <a href="Filtres.html" class="quick-view-link">👁 Voir le produit</a>
+              </div>
+            </div>
+            <div class="fav-card-body">
+              <h3 class="fav-card-title">Baskets premiers pas P.19</h3>
+              <div class="fav-card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 18</div>
+              <div class="fav-card-meta">
+                <span class="card-tag">Très bon état ⭐</span>
+                <span class="card-tag">P.19</span>
+                <span class="card-tag">Mixte 🧒</span>
+              </div>
+            </div>
+            <div class="fav-card-actions">
+              <label for="cart-3" class="cart-btn" role="button">
+                <span class="cart-btn-add">🛒 Ajouter au panier</span>
+                <span class="cart-btn-done">✅ Ajouté !</span>
+              </label>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fav 4 -->
+        <div>
+          <input type="checkbox" class="heart-toggle" id="heart-4" checked>
+          <input type="checkbox" class="cart-toggle" id="cart-4">
+          <article class="fav-card" aria-label="Doudou lapin, favori">
+            <div class="fav-card-img" style="background:linear-gradient(135deg,#fce8e8,#f9d4d4);">
+              <div class="card-img-placeholder" style="background:linear-gradient(135deg,#fce8e8,#f9d4d4);position:absolute;inset:0;font-size:52px;">🧸</div>
+              <label for="heart-4" class="heart-btn" aria-label="Retirer des favoris">
+                <span class="heart-icon-empty" aria-hidden="true">🤍</span>
+                <span class="heart-icon-filled" aria-hidden="true">❤️</span>
+              </label>
+              <div class="quick-view-overlay">
+                <a href="Filtres.html" class="quick-view-link">👁 Voir le produit</a>
+              </div>
+            </div>
+            <div class="fav-card-body">
+              <h3 class="fav-card-title">Doudou lapin musical</h3>
+              <div class="fav-card-price"><span class="coin-icon" style="width:20px;height:20px;font-size:10px;">⊙</span> 11</div>
+              <div class="fav-card-meta">
+                <span class="card-tag">Très bon état ⭐</span>
+                <span class="card-tag">0-3 ans</span>
+                <span class="card-tag">Mixte 🧒</span>
+              </div>
+            </div>
+            <div class="fav-card-actions">
+              <label for="cart-4" class="cart-btn" role="button">
+                <span class="cart-btn-add">🛒 Ajouter au panier</span>
+                <span class="cart-btn-done">✅ Ajouté !</span>
+              </label>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="images/Kidcycle.svg" alt="KidCycle" style="height:36px;margin-bottom:8px;">
+        <p class="footer-brand-text">La marketplace des vêtements enfants. Achetez, vendez, recyclez en toute sécurité.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="Filtres.html">🏠 Accueil</a></li>
+          <li><a href="Nouveautes.html">✨ Nouveautés</a></li>
+          <li><a href="Vente.html">💰 Vente</a></li>
+          <li><a href="Produits.html">📦 Mes Produits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Mon Compte</h4>
+        <ul class="footer-links">
+          <li><a href="Commandes.html">🛒 Commandes</a></li>
+          <li><a href="Favoris.html">♥ Favoris</a></li>
+          <li><a href="AjoutProduit.html">➕ Ajouter un produit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Aide</h4>
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2026 KidCycle. Tous droits réservés.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" aria-label="Retour en haut">↑</a>
+</body>
+</html>
